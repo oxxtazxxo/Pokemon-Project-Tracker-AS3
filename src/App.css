@@ -182,3 +182,16 @@
     border-right-color: var(--border);
   }
 }
+
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+}
+
+.header,
+.view-switcher,
+.dashboard-view,
+.about-view {
+  margin-bottom: 1.5rem;
+}
