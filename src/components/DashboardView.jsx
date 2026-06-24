@@ -13,8 +13,6 @@ function DashboardView({ tasks})
 
             {/* task list section */}
             <TaskList tasks={tasks}/>
-            {/* Dashboard summary */}
-            <h3>Total Tasks: {tasks.length}</h3>
 
             {/* Temporary task preview. Used for testing purposes! */}
             {/*<ul>

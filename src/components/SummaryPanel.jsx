@@ -24,8 +24,11 @@ function SummaryPanel({tasks}){
                 <p>Completed</p>
             </div>
             {/* in progress tasks card */}
-            <h3>{inProgressTasks}</h3>
-            <p>In Progress</p>
+            <div className="summary-card">
+                <h3>{inProgressTasks}</h3>
+                <p>In Progress</p>
+            </div>
+
         </div>
     );
 }
