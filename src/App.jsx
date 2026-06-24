@@ -16,8 +16,35 @@ function App()
   // "dashboard" will show the main task tracker page first
   const [view, setView] = useState("dashboard");
 
-  return
-  (
+  // tasks = list of project tasks that will appear on the dashboard :D
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      title: "Finish the Pokemon search form",
+      category: "HTML/CSS",
+      status: "Completed"
+    },
+    {
+      id: 2,
+      title: "Fetch Pokemon data from the PokeAPI",
+      category: "JavaScript",
+      status: "Completed"
+    },
+    {
+      id: 3,
+      title: "Improve styling for the result card layout. Make it pretty",
+      category: "CSS",
+      status: "In Progress"
+    },
+    {
+      id: 4,
+      title: "Add better error handling for invalid Pokemon names",
+      category: "JavaScript",
+      status: "Not Started"
+    }
+  ]);
+
+  return(
     <div className="app">
       {/* Header component shows the app title and intro blahblah */}
       <Header />
@@ -26,7 +53,11 @@ function App()
       <ViewSwitcher view={view} setView={setView} />
 
       {/* if view === "dashboard", then shows dashboardview, if not, show aboutview */}
-      {view === "dashboard" ? <DashboardView /> : <AboutView />}
+      {view === "dashboard" ? (
+        <DashboardView tasks={tasks}/>
+      ) : (
+        <AboutView />
+      )}
     </div>
   );
 }
