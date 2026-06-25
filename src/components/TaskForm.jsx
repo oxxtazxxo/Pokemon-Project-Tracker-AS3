@@ -1,6 +1,6 @@
 import {useState } from "react";
 
-function TaskForm(){
+function TaskForm({ addTask }){
     // stores the text for the task title input
     const [title, setTitle] = useState("");
 
@@ -15,7 +15,23 @@ function TaskForm(){
         event.preventDefault();
 
         // THIS IS A TEMP TEST! I want to see the submitted task
-        console.log("Task submitted: ", {title, category, status});
+        //console.log("Task submitted: ", {title, category, status});
+
+        // stops empty task titles from being added
+        if (title.trim() === ""){
+            return;
+        }
+
+        // creates a new task object from the form values
+        const newTask = {
+            id: Date.now(),
+            title: title,
+            category: category,
+            status: status
+        };
+
+        // this sends the new task to app.jsx
+        addTask(newTask);
 
         // clears the form after submitting
         setTitle("");
