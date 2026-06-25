@@ -2,7 +2,7 @@ import SummaryPanel from "./SummaryPanel";
 import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
 
-function DashboardView({ tasks})
+function DashboardView({ tasks, addTask})
 {
     return(
         <section className="dashboard-view">
@@ -13,7 +13,7 @@ function DashboardView({ tasks})
             <SummaryPanel tasks={tasks} />
 
             {/* task form section */}
-            <TaskForm />
+            <TaskForm addTask={addTask}/>
 
             {/* task list section */}
             <TaskList tasks={tasks}/>
