@@ -1,6 +1,6 @@
 import TaskCard from "./TaskCard";
 
-function TaskList({tasks}){
+function TaskList({tasks, deleteTask}){
     return(
         <section className="task-list">
             {/* section title for the task list */}
@@ -9,7 +9,7 @@ function TaskList({tasks}){
             {/* map goes through each tasks and makes one Taskcard for it :3 */}
             <div className="task-grid">
                 {tasks.map((task) => (
-                    <TaskCard key={task.id} task={task} />
+                    <TaskCard key={task.id} task={task} deleteTask={deleteTask}/>
                 ))}
             </div>
         </section>

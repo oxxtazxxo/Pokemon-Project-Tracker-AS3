@@ -48,6 +48,10 @@ function App()
     setTasks([...tasks, newTask]);
   };
 
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  };
+
   return(
     <div className="app">
       {/* Header component shows the app title and intro blahblah */}
@@ -58,7 +62,10 @@ function App()
 
       {/* if view === "dashboard", then shows dashboardview, if not, show aboutview */}
       {view === "dashboard" ? (
-        <DashboardView tasks={tasks} addTask={addTask}/>
+        <DashboardView 
+        tasks={tasks} 
+        addTask={addTask}
+        deleteTask={deleteTask}/>
       ) : (
         <AboutView />
       )}
