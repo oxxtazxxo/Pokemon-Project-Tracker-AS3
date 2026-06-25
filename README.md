@@ -1,19 +1,64 @@
-# React + Vite
+# Pokemon Project Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React dashboard made for COSC 3351's assignment 3 to track my progress on the Pokemon Info Finder individual projectt!
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pokemon Project Tracker is a small task management dashboard built with React and Vite. It was designed to help track the progress of my pokemon Info Finder by organizing tasks, showing project status, and giving a simple overview.
 
-## React Compiler
+The dashboard allows the user to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- switch between Dashboard and About views
+- view project summary information
+- add new project tasks
+- delete tasks that are no longer needed
+- keep track of task categories and statuses
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Dashboard / About page view switching
+- Summary cards for:
+    - Total Tasks
+    - Completed Tasks
+    - In Progress Tasks
+- Add Task form using controlled inputs
+- Delete Task functionality
+- Task cards displayed dynamically from React state
+- Custom green dashboard styling with card-based layout :3
 
+## Technologies Used
+- React
+- Vite
+- JavaScript
+- CSS
 
-Pokemon Project Tracker for COSC 3351 Assignment 3 :3
+## How to run the project!
+1. Open the project folder in Visual Studios Code
+2. Open a terminal in the project directory
+3. Install dependencies if needed
+    npm install
+4. Start the development server
+    npm run dev
+5. Open the local Vite link in your browser
+
+## Project Structure
+- App.jsx > main app component and task state management
+- Header.jsx > dashboard title and intro section
+- ViewSwitcher.jsx > buttons for switching between Dashboard and About Views
+- DashboardView.jsx > main dashboard layout
+- AboutView.jsx > information about the tracker
+- SummaryPanel.jsx - summary cards showing task count
+- TaskForm.jsx - form for adding new tasks
+- TaskList.jsx - renders the list of task cards
+- TaskCard.jsx - individual task display with "delete" button (DELETE ME)
+
+# Author
+This project was created for COSC 3351 Assignment 3 and focuses on practicing React fundamentals such as:
+
+- components
+- props
+- state with useState
+- conditional rendering
+- list rendering with .map()
+- controlled forms
+- passing functions through props
