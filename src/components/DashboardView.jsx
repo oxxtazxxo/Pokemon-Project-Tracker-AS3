@@ -1,5 +1,6 @@
 import SummaryPanel from "./SummaryPanel";
 import TaskList from "./TaskList";
+import TaskForm from "./TaskForm";
 
 function DashboardView({ tasks})
 {
@@ -10,6 +11,9 @@ function DashboardView({ tasks})
 
             {/* summary stats section */}
             <SummaryPanel tasks={tasks} />
+
+            {/* task form section */}
+            <TaskForm />
 
             {/* task list section */}
             <TaskList tasks={tasks}/>
