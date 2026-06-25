@@ -11,7 +11,7 @@ function TaskCard({task, deleteTask}){
             <p>Status: {task.status}</p>
 
             {/* delete button removes this task by its id */}
-            <button onClick={() => deleteTask(task.id)}>Delete ME</button>
+            <button onClick={() => deleteTask(task.id)}>DELETE ME</button>
         </article>
     );
 }
