@@ -53,6 +53,9 @@ The dashboard allows the user to:
 - TaskCard.jsx - individual task display with "delete" button (DELETE ME)
 
 # Author
+
+Alyssa Scott
+
 This project was created for COSC 3351 Assignment 3 and focuses on practicing React fundamentals such as:
 
 - components
