@@ -1,10 +1,10 @@
 # Pokemon Project Tracker
 
-A React dashboard made for COSC 3351's assignment 3 to track my progress on the Pokemon Info Finder individual projectt!
+A React dashboard made for COSC 3351's assignment 3 to track my progress on the Pokemon Info Finder individual project!
 
 ## Project Description
 
-Pokemon Project Tracker is a small task management dashboard built with React and Vite. It was designed to help track the progress of my pokemon Info Finder by organizing tasks, showing project status, and giving a simple overview.
+Pokemon Project Tracker is a small task management dashboard built with React and Vite. It was designed to help track the progress of my Pokemon Info Finder by organizing tasks, showing project status, and giving a simple overview.
 
 The dashboard allows the user to:
 
