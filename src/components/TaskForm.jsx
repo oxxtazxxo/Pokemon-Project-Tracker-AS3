@@ -44,41 +44,51 @@ function TaskForm({ addTask }){
             <h3>Add a New Task :3</h3>
 
             <form className="task-form" onSubmit={handleSubmit}>
-                {/* task title input */}
-                <label htmlFor="task-title">Task Title:</label>
-                <input
-                    id="task-title"
-                    type="text"
-                    value={title}
-                    onChange={(event) => setTitle(event.target.value)}
-                    placeholder="Enter a task title"
-                />
-                {/* category dropdown */}
-                <label htmlFor="task-category">Category:</label>
-                <select
-                    id="task-category"
-                    value={category}
-                    onChange={(event) => setCategory(event.target.value)}
+                <div className="form-group">
+                    {/* task title input */}
+                    <label htmlFor="task-title">Task Title</label>
+                        <input
+                            id="task-title"
+                            type="text"
+                            value={title}
+                            onChange={(event) => setTitle(event.target.value)}
+                            placeholder="Enter a task title"
+                        />
+                </div>
+                    
+                <div className="form-group">
+                    {/* category dropdown */}
+                    <label htmlFor="task-category">Category</label>
+                    <select
+                        id="task-category"
+                        value={category}
+                        onChange={(event) => setCategory(event.target.value)}
+                    >
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="API">API</option>
+                        <option value="UI Design">UI Design</option>
+                        <option value="Testing">Testing</option>
+                    </select>
+                </div>
+                
+                <div className="form-group">
+                    {/* status dropdown */}
+                    <label htmlFor="task-status">Status</label>
+                    <select
+                        id="task-status"
+                        value={status}
+                        onChange={(event) => setStatus(event.target.value)}
                 >
-                    <option value="HTML/CSS">HTML/CSS</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="API">API</option>
-                    <option value="UI Design">UI Design</option>
-                    <option value="Testing">Testing</option>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
                 </select>
-                {/* status dropdown */}
-                <label htmlFor="task-status">Status</label>
-                <select
-                    id="task-status"
-                    value={status}
-                    onChange={(event) => setStatus(event.target.value)}
-                >
-                    <option value="Not Started">Not Started</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="Completed">Completed</option>
-                </select>
-
-                <button type="submit">Add Task</button>
+                </div>
+                
+                <div className="form-button-wrap">
+                    <button type="submit">Add Task</button>
+                </div>
             </form>
         </section>
     );

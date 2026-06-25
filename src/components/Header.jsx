@@ -4,7 +4,7 @@ function Header() {
       <h1>Pokemon Project Tracker</h1>
       <p>
         A React dashboard for tracking progress on the Pokemon Info Finder
-        project.
+        project!
       </p>
     </header>
   );
