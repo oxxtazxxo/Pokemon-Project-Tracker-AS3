@@ -43,6 +43,10 @@ function App()
       status: "Not Started"
     }
   ]);
+  // adds a new task to the array
+  const addTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  };
 
   return(
     <div className="app">
@@ -54,7 +58,7 @@ function App()
 
       {/* if view === "dashboard", then shows dashboardview, if not, show aboutview */}
       {view === "dashboard" ? (
-        <DashboardView tasks={tasks}/>
+        <DashboardView tasks={tasks} addTask={addTask}/>
       ) : (
         <AboutView />
       )}
